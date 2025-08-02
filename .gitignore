@@ -1,0 +1,40 @@
+# Ignore Python cache
+__pycache__/
+*.py[cod]
+*.so
+*.pyd
+*.pyo
+
+# Ignore Jupyter notebooks checkpoints
+.ipynb_checkpoints/
+
+# Ignore virtual environment
+venv/
+env/
+ENV/
+.venv/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# VSCode settings (optional)
+.vscode/
+
+# Pytest / test cache
+.pytest_cache/
+
+# Model files
+*.pkl
+*.joblib
+
+# Logs
+*.log
+
+# Node stuff if using React frontend
+node_modules/
+dist/
+build/
+
+# dotenv if you use it
+.env

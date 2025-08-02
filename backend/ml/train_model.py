@@ -33,12 +33,12 @@ def evaluate_model(model,X_test,y_test):
     print(classification_report(y_test, y_pred))
 
 def save_model(model):
-    joblib.dump(model,"models/cbc_ai_model.pkl")
+    joblib.dump(model,"cbc_ai_model.pkl")
 
 
 
 if __name__ == "__main__":
-    filepath = "data/simulated_cbc_dataset.csv"
+    filepath = "../data/simulated_cbc_dataset.csv"
     df = load_data(filepath)
     X, y = prepare_features_labels(df)
     X_train, X_test, y_train, y_test = split_into_sets(X, y)

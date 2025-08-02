@@ -1,18 +1,20 @@
 # Ignore Python cache
 __pycache__/
+backend/**/__pycache__/
 *.py[cod]
 *.so
 *.pyd
 *.pyo
 
-# Ignore Jupyter notebooks checkpoints
+# Ignore Jupyter notebook checkpoints
 .ipynb_checkpoints/
 
-# Ignore virtual environment
+# Ignore virtual environments (including backend)
 venv/
 env/
 ENV/
 .venv/
+backend/venv/
 
 # Ignore system files
 .DS_Store
@@ -24,17 +26,29 @@ Thumbs.db
 # Pytest / test cache
 .pytest_cache/
 
-# Model files
+# Model files (adjust if you want to track models)
 *.pkl
 *.joblib
 
 # Logs
 *.log
 
-# Node stuff if using React frontend
+# Node.js dependencies and builds
 node_modules/
+frontend/node_modules/
 dist/
 build/
+frontend/dist/
+frontend/build/
 
-# dotenv if you use it
+# dotenv config files
 .env
+
+# Data files and folders (adjust if you want to track data)
+*.csv
+data/
+backend/data/
+
+# Optional: Ignore local database files
+*.sqlite3
+*.db

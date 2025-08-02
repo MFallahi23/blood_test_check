@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from routers import predict
 
 app = FastAPI()
 
@@ -18,6 +19,5 @@ app.add_middleware(
 def test():
     return {"message":"Backend is working"}
 
-@app.get("/predict")
-def predict_probability():
-    print("hello")
+app.include_router(predict.router)
+

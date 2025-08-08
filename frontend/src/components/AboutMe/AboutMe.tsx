@@ -29,10 +29,8 @@ const AboutMe: FC = () => {
               </p>
               <p>
                 I'm particularly skilled in{" "}
-                <span className="about-me__colored">system design</span> and
-                <span className="about-me__colored">
-                  software architecture
-                </span>{" "}
+                <span className="about-me__colored">system design</span> and{" "}
+                <span className="about-me__colored">software architecture</span>{" "}
                 for <strong>medical applications</strong> , with a solid
                 understanding of{" "}
                 <span className="about-me__colored">algorithms</span> and real{" "}

@@ -16,6 +16,7 @@
 
   &__logo {
     font-family: vars.$ff-secondary;
+    user-select: none;
 
     svg {
       fill: vars.$color-very-dark-blue;

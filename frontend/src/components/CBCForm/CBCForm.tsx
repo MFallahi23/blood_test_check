@@ -63,7 +63,7 @@ const CBCForm: FC = () => {
       </h1>
       <div className="container">
         <h2 className="cbc__title">
-          AI-Poewred{" "}
+          AI-Powered{" "}
           <span className="cbc__title-colored">Complete Blood Count</span>
           (CBC) Analyzer
         </h2>

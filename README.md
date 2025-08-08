@@ -1,4 +1,4 @@
-# Blood Test Checker — AI Web App
+# CBC Analyzer — AI Web App
 This project is a machine learning–powered web application designed to assist in analyzing blood test results. It predicts whether a test result may contain anomalies or require further review. While this is a first experimental project, it served as a valuable learning experience in deploying an end-to-end ML application.
 
 ## Tech Stack

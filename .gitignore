@@ -52,3 +52,5 @@ backend/data/
 # Optional: Ignore local database files
 *.sqlite3
 *.db
+
+

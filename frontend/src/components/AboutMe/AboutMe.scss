@@ -1,0 +1,86 @@
+@use "../../styles/variables.scss" as vars;
+@use "../../styles/mixins.scss" as *;
+
+.about-me {
+  padding: 10px 0 60px;
+
+  &__wrapper {
+    position: relative;
+
+    &::before {
+      content: "";
+      height: 4px;
+      width: calc(50% - 10px);
+      border-radius: 5px;
+      position: absolute;
+      top: -20px;
+      left: 0;
+      background-color: vars.$color-bright-red;
+    }
+
+    &::after {
+      content: "";
+      height: 4px;
+      width: calc(50% - 10px);
+      border-radius: 5px;
+      position: absolute;
+      top: -20px;
+      right: 0;
+      background-color: vars.$color-bright-red;
+    }
+  }
+
+  &__title {
+    font-size: 28px;
+
+    @include vp-767 {
+      text-align: center;
+    }
+
+    @media (max-width: 400px) {
+      font-size: 20px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    gap: 80px;
+
+    @include vp-767 {
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    @media (max-width: 400px) {
+      gap: 20px;
+    }
+  }
+
+  &__img {
+    border-radius: 10px;
+
+    @include vp-767 {
+      width: 100%;
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    p {
+      margin: 0;
+      font-size: 18px;
+
+      @media (max-width: 400px) {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__colored {
+    color: vars.$color-very-dark-blue;
+    font-weight: bold;
+  }
+}

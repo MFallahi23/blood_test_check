@@ -1,0 +1,34 @@
+@use "../../styles/variables.scss" as vars;
+@use "../../styles/mixins.scss" as *;
+
+.footer {
+  width: 100%;
+  background-color: vars.$color-bright-red;
+  color: vars.$color-white;
+  border-radius: 15px 15px 0 0;
+  padding: 15px 0;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include vp-767 {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  &__made-by {
+    display: flex;
+    flex-direction: column;
+
+    @include vp-767 {
+      align-items: center;
+    }
+  }
+
+  &__warning {
+    text-align: center;
+  }
+}

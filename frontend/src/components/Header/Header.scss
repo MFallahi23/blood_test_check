@@ -1,0 +1,97 @@
+@use "../../styles/variables.scss" as vars;
+@use "../../styles/mixins.scss" as *;
+
+.header {
+  width: 100%;
+  background-color: vars.$color-bright-red;
+  color: vars.$color-white;
+  border-radius: 0 0 15px 15px;
+  padding: 15px 0;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    font-family: vars.$ff-secondary;
+
+    svg {
+      fill: vars.$color-very-dark-blue;
+    }
+    &-top {
+      display: flex;
+      gap: 10px;
+      align-items: baseline;
+
+      @include vp-767 {
+        gap: 5px;
+      }
+    }
+    &-text {
+      font-size: 24px;
+      font-weight: bold;
+
+      @include vp-767 {
+        font-size: 20px;
+      }
+    }
+
+    &-tagline {
+      font-size: 13px;
+      @include vp-767 {
+        font-size: 12px;
+      }
+    }
+  }
+
+  &__nav {
+    &-items {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+
+      @include vp-767 {
+        gap: 10px;
+      }
+    }
+  }
+
+  &__link {
+    color: vars.$color-white;
+    cursor: pointer;
+
+    &--work {
+      background-color: vars.$color-very-dark-blue;
+      padding: 10px;
+      border-radius: 5px;
+      transition: background-color vars.$transition-300;
+
+      &:hover,
+      &:focus-visible {
+        background-color: vars.$color-east-bay;
+        outline: none;
+      }
+
+      @include vp-767 {
+        padding: 8px;
+      }
+    }
+
+    &--hide-mobile {
+      @media (max-width: 396px) {
+        display: none;
+      }
+    }
+  }
+
+  &__socials {
+    @include vp-767 {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@use "../../styles/variables.scss" as vars;
+
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+
+  svg {
+    fill: vars.$color-white;
+  }
+}

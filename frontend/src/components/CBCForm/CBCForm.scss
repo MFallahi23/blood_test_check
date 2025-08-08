@@ -1,0 +1,56 @@
+@use "../../styles/variables.scss" as vars;
+@use "../../styles/mixins.scss" as *;
+
+.cbc {
+  padding: 40px;
+
+  &__title {
+    font-size: 35px;
+    margin: 0 0 30px;
+
+    @include vp-767 {
+      font-size: 25px;
+      text-align: center;
+    }
+
+    @media (max-width: 396px) {
+      font-size: 20px;
+    }
+
+    &-colored {
+      color: vars.$color-bright-red;
+    }
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    &-wrapper {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 20px;
+
+      @include vp-767 {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+
+  &__submit {
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: vars.$color-bright-red;
+    color: vars.$color-white;
+    border: none;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 18px;
+    font-weight: bold;
+
+    @include vp-767 {
+      width: 100%;
+    }
+  }
+}

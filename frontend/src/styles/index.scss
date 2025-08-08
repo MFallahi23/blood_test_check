@@ -1,0 +1,46 @@
+@use "./variables.scss" as vars;
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  color: vars.$color-black;
+  font-family: vars.$ff-main;
+  margin: 0;
+  padding: 0;
+  background: vars.$color-white-70;
+}
+
+button {
+  font-family: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: vars.$color-black;
+}
+
+img {
+  display: block;
+  height: auto;
+  object-fit: cover;
+  max-width: 100%;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+  display: none;
+}
+
+main {
+  flex-grow: 1;
+}

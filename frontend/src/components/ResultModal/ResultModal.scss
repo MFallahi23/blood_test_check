@@ -1,0 +1,102 @@
+@use "../../styles/variables.scss" as vars;
+@use "../../styles/mixins.scss" as *;
+
+.result-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: vars.$color-white;
+  padding: 30px;
+  border-radius: 10px;
+  z-index: 3;
+
+  @include vp-767 {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translate(0, 0);
+    border-radius: 0;
+  }
+
+  &--hide {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+  }
+
+  &__bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 11, 11, 0.9);
+    z-index: 2;
+
+    &--hide {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+
+  &__title {
+    margin: 0 0 20px;
+    font-size: 25px;
+
+    @include vp-767 {
+      font-size: 20px;
+      text-align: center;
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__confidence {
+    font-weight: bold;
+    font-size: 25px;
+  }
+
+  &__close {
+    background-color: vars.$color-very-dark-blue;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    min-width: 100px;
+    color: vars.$color-white;
+    cursor: pointer;
+    transition: background-color vars.$transition-100;
+
+    @include vp-767 {
+      width: 100%;
+      padding: 20px;
+      font-size: 18px;
+    }
+
+    &:hover {
+      background-color: vars.$color-dark-green;
+    }
+  }
+
+  &__end {
+    @include vp-767 {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
